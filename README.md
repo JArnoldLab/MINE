@@ -1,8 +1,6 @@
 # MINE
 
 #Pre-processing
-
-
 For pre-processing run the script binning.py for each chromosome. The use is the following:
 
 python binning.py
