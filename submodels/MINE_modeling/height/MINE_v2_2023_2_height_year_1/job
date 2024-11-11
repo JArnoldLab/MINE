@@ -1,0 +1,18 @@
+#!/bin/bash
+#SBATCH --job-name=ham_r1       
+#SBATCH --partition=batch     
+#SBATCH --ntasks=1              	
+#SBATCH --cpus-per-task=1            
+#SBATCH --mem=3gb               
+#SBATCH --time=125:00:00 
+#SBATCH --mail-type=END,FAIL       
+#SBATCH --mail-user=it19423@uga.edu
+#SBATCH --constraint=Rome	
+
+cd $SLURM_SUBMIT_DIR
+
+
+ml numba/0.55.1-fosscuda-2020b-Python-3.8.6
+export OMP_NUM_THREADS=1
+
+python main_file.py CONFIG
